@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import NewsAppNavBar from './Components/NewsAppNavBar';
+import NewsAppNews from './Components/NewsAppNews';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+  render() {
+    
+    return (
+      <div>
+        <NewsAppNavBar/>
+        <NewsAppNews pageSize={9} country="in" category="sports"/>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
